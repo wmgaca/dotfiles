@@ -1,0 +1,24 @@
+#!/bin/bash
+
+MSG="C'mon, give me something I can work with...\nNo params? Nothing to do here.";
+
+# Header
+echo "";
+printf "ಠ_ಠ "
+
+# The message itself
+if [ "$1" ]
+then
+    for arg in $@
+    do
+        printf "$arg ";
+    done
+else
+    printf "$MSG";
+fi
+
+# Footer
+echo "";
+
+# Aaand quit
+exit;

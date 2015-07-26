@@ -1,0 +1,23 @@
+[user]
+	name = Wojciech Gaca
+	email = wmgaca@gmail.com
+[color]
+	interactive = true
+	ui = auto
+[push]
+	default = tracking
+[branch]
+	autosetuprebase = always
+[core]
+	editor = /usr/bin/vim
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[grep]
+	extendRegexp = true
+	lineNumber = true
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

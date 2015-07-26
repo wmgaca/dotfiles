@@ -1,0 +1,30 @@
+#!/bin/bash
+
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -lhFG'
+alias lla='ls -AlhFG'
+alias lls='ll -tr'
+alias ..='cd ..'
+
+alias cdgo="cd $GOPATH"
+
+alias grep='grep --color=auto'
+
+alias reload='. ~/.bashrc'
+
+alias git=hub
+
+alias gd='git diff'
+alias gdc='gd --cached'
+alias gs='git status -sb'
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+alias gca='git commit --amend --no-edit'
+alias gco='git checkout'
+alias gb='git branch'
+alias gfa='git fetch --all'
+alias gg='git grep --break --heading --line-number'
+
+function gtp() {
+    git tag -a $1 -m "$1" && git push origin $1
+}

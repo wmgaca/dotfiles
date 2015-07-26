@@ -1,0 +1,8 @@
+#!/bin/bash
+
+OUT=$(grep "\[$1\]" ~/.aws/credentials -A2 \
+    | tail -n2 \
+    | sed 's/aws_access_key_id = /export AWS_ACCESS_KEY_ID=/' \
+    | sed 's/aws_secret_access_key = /export AWS_SECRET_ACCESS_KEY=/')
+
+echo $OUT
