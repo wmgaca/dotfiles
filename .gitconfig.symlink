@@ -10,6 +10,7 @@
 	autosetuprebase = always
 [core]
 	editor = /usr/bin/vim
+	autocrlf = false
 [filter "media"]
 	required = true
 	clean = git media clean %f

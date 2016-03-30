@@ -7,8 +7,8 @@ PATH="$PATH:/usr/local/mysql/support-files"
 PATH="$PATH:/usr/local/mysql/bin"
 PATH="$PATH:$GOPATH/bin"
 PATH="$PATH:/opt/chefdk/bin"
-PATH="$PATH:$HOME/tools/packer"
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+PATH="$PATH:/usr/local/Cellar/python/2.7.11/Frameworks/Python.framework/Versions/2.7/bin"
 
 export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
@@ -107,7 +107,7 @@ git_info() {
         fi
       fi
     fi
-   
+
     if [ -n "$1" ]; then
       printf "$1" "${b##refs/heads/}$r"
     else
@@ -165,3 +165,26 @@ export TERM="xterm-256color"
 
 # added by travis gem
 [ -f /Users/wmgaca/.travis/travis.sh ] && source /Users/wmgaca/.travis/travis.sh
+
+# Set up ssh-agent
+SSH_ENV="$HOME/.ssh/environment"
+
+function start_agent {
+    touch $SSH_ENV
+    chmod 600 "${SSH_ENV}"
+    /usr/bin/ssh-agent | sed 's/^echo/#echo/' >> "${SSH_ENV}"
+    . "${SSH_ENV}" > /dev/null
+    /usr/bin/ssh-add
+}
+
+# Source SSH settings, if applicable
+if [ -f "${SSH_ENV}" ]; then
+    . "${SSH_ENV}" > /dev/null
+    kill -0 $SSH_AGENT_PID 2>/dev/null || {
+        start_agent
+    }
+else
+    start_agent
+fi
+
+alias tar=gtar
