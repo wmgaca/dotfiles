@@ -118,21 +118,12 @@ git_info() {
 
 PS1='\[$(tput setaf 6)\]\[$(tput bold)\]\w\[$(tput setaf 5)\]$(git_info)\[$(tput setaf 7)\] \[$(tput sgr0)\]'
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f $/.bash_aliases ]; then
-    source $HOME/.bash_aliases
-fi
-
-if [ -f $HOME/.dubizzlerc ]; then
-    source $HOME/.dubizzlerc
-fi
-
 if [ -f $HOME/.myrc ]; then
     source $HOME/.myrc
+fi
+
+if [ -f $HOME/.secretrc ]; then
+    source $HOME/.secretrc
 fi
 
 # enable color support of ls and also add handy aliases
