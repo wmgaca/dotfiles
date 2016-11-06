@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
+export GOPATH="$HOME/dev/go"
+
 PATH="$PATH:$HOME/bin"
+PATH="$PATH:$GOPATH/bin"
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # If not running interactively, don't do anything

@@ -13,8 +13,6 @@ alias grep='grep --color=auto'
 
 alias reload='. ~/.bashrc'
 
-#alias git=hub
-
 alias gd='git diff'
 alias gdc='gd --cached'
 alias gs='git status -sb'
