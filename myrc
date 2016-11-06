@@ -13,7 +13,7 @@ alias grep='grep --color=auto'
 
 alias reload='. ~/.bashrc'
 
-alias git=hub
+#alias git=hub
 
 alias gd='git diff'
 alias gdc='gd --cached'
@@ -24,7 +24,3 @@ alias gco='git checkout'
 alias gb='git branch'
 alias gfa='git fetch --all'
 alias gg='git grep --break --heading --line-number'
-
-function gtp() {
-    git tag -a $1 -m "$1" && git push origin $1
-}

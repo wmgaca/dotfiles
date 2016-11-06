@@ -7,6 +7,8 @@ packages:
 	brew bundle
 
 symlink:
-	@echo symlink
+	ln -f -s "$(shell pwd)/bashrc" "$(HOME)/.bashrc"
+	ln -f -s "$(shell pwd)/bash_profile" "$(HOME)/.bash_profile"
+	ln -f -s "$(shell pwd)/myrc" "$(HOME)/.myrc"
 
 all: symlink packages

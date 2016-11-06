@@ -1,18 +1,7 @@
 #!/usr/bin/env bash
 
-export GOPATH="$HOME/dev/go"
-
 PATH="$PATH:$HOME/bin"
-PATH="$PATH:/usr/local/mysql/support-files"
-PATH="$PATH:/usr/local/mysql/bin"
-PATH="$PATH:$GOPATH/bin"
-PATH="$PATH:/opt/chefdk/bin"
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-PATH="$PATH:/usr/local/Cellar/python/2.7.11/Frameworks/Python.framework/Versions/2.7/bin"
-
-export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
-export DOCKER_HOST=tcp://192.168.59.103:2376
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -145,17 +134,9 @@ if [ -f /etc/bash_completion ]; then
     source /etc/bash_completion
 fi
 
-# Solarized
-if [ -x /usr/bin/dircolors ]; then
-	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-fi
-
 alias tmux="TERM=screen-256color-bce tmux"
 # Solarized stuff
 export TERM="xterm-256color"
-
-# added by travis gem
-[ -f /Users/wmgaca/.travis/travis.sh ] && source /Users/wmgaca/.travis/travis.sh
 
 # Set up ssh-agent
 SSH_ENV="$HOME/.ssh/environment"
