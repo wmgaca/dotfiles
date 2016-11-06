@@ -11,5 +11,7 @@ symlink:
 	ln -f -s "$(shell pwd)/bash_profile" "$(HOME)/.bash_profile"
 	ln -f -s "$(shell pwd)/myrc" "$(HOME)/.myrc"
 	ln -f -s "$(shell pwd)/gitconfig" "$(HOME)/.gitconfig"
+        ln -f -s "$(shell pwd)/vim" "$(HOME)/.vim"
+        ln -f -s "$(shell pwd)/vimrc" "$(HOME)/.vimrc"
 
 all: symlink packages
