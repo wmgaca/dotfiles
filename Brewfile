@@ -27,6 +27,7 @@ brew 'wget'
 
 cask '1password'
 cask 'Caskroom/cask/iterm2'
+cask 'Caskroom/cask/flux'
 cask 'Caskroom/cask/karabiner'
 cask 'Caskroom/cask/spotify'
 cask 'google-chrome'
