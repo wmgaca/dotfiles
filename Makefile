@@ -13,5 +13,6 @@ symlink:
 	ln -f -s "$(shell pwd)/gitconfig" "$(HOME)/.gitconfig"
 	ln -f -s "$(shell pwd)/vim" "$(HOME)/.vim"
 	ln -f -s "$(shell pwd)/vimrc" "$(HOME)/.vimrc"
+	ln -f -s "$(shell pwd)/bin" "$(HOME)/bin"
 
 all: symlink packages
