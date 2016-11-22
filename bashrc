@@ -108,7 +108,7 @@ git_info() {
   fi
 }
 
-PS1='\[$(tput setaf 6)\]\[$(tput bold)\]\w\[$(tput setaf 5)\]$(git_info)\[$(tput setaf 7)\] \[$(tput sgr0)\]'
+PS1='\n\[$(tput setaf 6)\]\[$(tput bold)\]\w\[$(tput setaf 5)\]$(git_info)\[$(tput setaf 7)\] \[$(tput sgr0)\]\n~ '
 
 if [ -f $HOME/.myrc ]; then
     source $HOME/.myrc

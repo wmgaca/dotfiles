@@ -14,5 +14,6 @@ symlink:
 	ln -f -s "$(shell pwd)/vim" "$(HOME)/.vim"
 	ln -f -s "$(shell pwd)/vimrc" "$(HOME)/.vimrc"
 	ln -f -s "$(shell pwd)/bin" "$(HOME)/bin"
+	ln -f -s "$(shell pwd)/secretrc" "$(HOME)/.secretrc"
 
 all: symlink packages
