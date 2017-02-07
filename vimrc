@@ -1,20 +1,13 @@
-"" Pathogen
 execute pathogen#infect()
 
-" Color my world
 syntax enable
 colorscheme desert
 set background=dark
 
-" Font
-set guifont=PragmataPro:h13
-
-" Filetype plugin
 filetype on
 filetype plugin indent on
 
-" Stuff
-set nocompatible    " Turn of legacy vi compatibility
+set nocompatible
 set encoding=utf-8
 set ruler
 set number
@@ -23,23 +16,20 @@ set linebreak
 set nolist
 set wrapmargin=0
 set tabstop=4
-" set tw=4
 set softtabstop=4
 set sw=4
 set report=0
-set expandtab       " Replace tabs with spaces
+set expandtab
 set autoindent
 set winfixwidth
-set ttyfast         " Improve drawing
-set scrolloff=8     " Always >= 8 lines before the window's bottom
-set noerrorbells    " Don't talk to me
+set ttyfast
+set scrolloff=8
+set noerrorbells
 
-" Search
-
-set hlsearch        " "Highlight matches
+set hlsearch
 set incsearch
-set ignorecase      " Case insensitive search
-set smartcase       " ...unless at least one capital letter is present
+set ignorecase
+set smartcase
 
 autocmd BufWritePre * :%s/\s\+$//e
 
