@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 export GOPATH="$HOME/dev/go"
 
 PATH="$PATH:$HOME/bin"
@@ -9,44 +8,12 @@ PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-# don't put duplicate lines in the history. See bash(1) for more options
-# don't overwrite GNU Midnight Commander's setting of `ignorespace'.
-export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
-# ... or force ignoredups and ignorespace
-export HISTCONTROL=ignoreboth
-
 # append to the history file, don't overwrite it
 shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
-
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-    xterm-color) color_prompt=yes;;
-esac
-
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
-#force_color_prompt=yes
-
-if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
-    else
-	color_prompt=
-    fi
-fi
 
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
@@ -105,36 +72,12 @@ git_info() {
 
 PS1='\n\[$(tput setaf 6)\]\[$(tput bold)\]\w\[$(tput setaf 5)\]$(git_info)\[$(tput setaf 7)\] \[$(tput sgr0)\]\n$ '
 
-if [ -f $HOME/.myrc ]; then
-    source $HOME/.myrc
-fi
-
-if [ -f $HOME/.secretrc ]; then
-    source $HOME/.secretrc
-fi
-
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    eval "`dircolors -b`"
-    alias ls='ls --color=auto'
-    alias dir='dir --color=auto'
-    alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ]; then
     source /etc/bash_completion
 fi
-
-alias tmux="TERM=screen-256color-bce tmux"
-# Solarized stuff
-export TERM="xterm-256color"
 
 # Set up ssh-agent
 SSH_ENV="$HOME/.ssh/environment"
@@ -159,4 +102,12 @@ fi
 
 if [ ! -z "$(which gtar)" ]; then
     alias tar=gtar
+fi
+
+if [ -f $HOME/.myrc ]; then
+    source $HOME/.myrc
+fi
+
+if [ -f $HOME/.secretrc ]; then
+    source $HOME/.secretrc
 fi
