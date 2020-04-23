@@ -31,6 +31,8 @@ set incsearch
 set ignorecase
 set smartcase
 
+set bs=2
+
 autocmd BufWritePre * :%s/\s\+$//e
 
 let NERDTreeIgnore = ['\.pyc$']
