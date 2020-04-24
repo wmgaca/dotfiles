@@ -1,6 +1,6 @@
 PHONY: packages
 
-DEFAULT_TARGET: all
+DEFAULT_TARGET:u all
 
 packages:
 	brew tap homebrew/bundle
@@ -14,6 +14,5 @@ symlink:
 	ln -f -s "$(shell pwd)/vim" "$(HOME)/.vim"
 	ln -f -s "$(shell pwd)/vimrc" "$(HOME)/.vimrc"
 	ln -f -s "$(shell pwd)/bin" "$(HOME)/"
-	ln -f -s "$(shell pwd)/karabinerd" "$(HOME)/.karabiner.d"
 
 all: symlink packages
