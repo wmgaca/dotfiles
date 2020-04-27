@@ -1,8 +1,6 @@
 cask_args appdir: '/Applications'
-
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
-
 brew 'awscli'
 brew 'bash'
 brew 'bash-completion'
@@ -32,9 +30,8 @@ brew 'tree'
 brew 'vim'
 brew 'watch'
 brew 'wget'
-
-cask 'android-studio'
 cask '1password'
+cask 'android-studio'
 cask 'flux'
 cask 'google-chrome'
 cask 'iterm2'
@@ -44,13 +41,12 @@ cask 'slack'
 cask 'spotify'
 cask 'visual-studio-code'
 cask 'zoomus'
-
+mas 'Grammarly for Safari', id: 1462114288
 mas 'Magnet', id: 441258766
-mas 'Xcode', id: 497799835
-mas 'iA Writer', id: 775737590
-mas 'OneDrive', id: 823766827
 mas 'Microsoft Excel', id: 462058435
 mas 'Microsoft Outlook', id: 985367838
 mas 'Microsoft PowerPoint', id: 462062816
 mas 'Microsoft Word', id: 462054704
-mas 'Grammarly for Safari', id: 1462114288
+mas 'OneDrive', id: 823766827
+mas 'Xcode', id: 497799835
+mas 'iA Writer', id: 775737590
