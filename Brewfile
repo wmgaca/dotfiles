@@ -40,7 +40,9 @@ cask 'karabiner-elements'
 cask 'slack'
 cask 'spotify'
 cask 'visual-studio-code'
+cask 'whatsapp'
 cask 'zoomus'
+cask 'microsoft-teams'
 mas 'Grammarly for Safari', id: 1462114288
 mas 'Magnet', id: 441258766
 mas 'Microsoft Excel', id: 462058435
