@@ -1,11 +1,9 @@
 # dotfiles
 
-## Pre
+Prerequisites:
+- [Homebrew](http://brew.sh)
 
-- Homebrew
-
-## Install
-
+Install:
 ```bash
 make
 ```
