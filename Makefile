@@ -1,6 +1,6 @@
-PHONY: packages
+PHONY: packages symlink karabiner-config
 
-DEFAULT_TARGET:u all
+DEFAULT_TARGET: all
 
 packages:
 	brew tap homebrew/bundle
@@ -15,4 +15,9 @@ symlink:
 	ln -f -s "$(shell pwd)/vimrc" "$(HOME)/.vimrc"
 	ln -f -s "$(shell pwd)/bin" "$(HOME)/"
 
-all: symlink packages
+karabiner-config:
+	rm -rf ~/.config/karabiner
+	mkdir -p ~/.config
+	ln -f -s "$(shell pwd)/karabiner" $(HOME)/.config/karabiner
+
+all: symlink karabiner-config packages
