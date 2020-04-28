@@ -6,6 +6,9 @@
       },
       "homebrew/bundle": {
         "revision": "784f4e47c2e527c515454212db158149f869c7f3"
+      },
+      "dart-lang/dart": {
+        "revision": "730b149966ccadea745314da0b6cb41cb6f32200"
       }
     },
     "brew": {
@@ -573,6 +576,10 @@
             }
           }
         }
+      },
+      "dart": {
+        "version": "2.7.2",
+        "bottle": false
       }
     },
     "cask": {
