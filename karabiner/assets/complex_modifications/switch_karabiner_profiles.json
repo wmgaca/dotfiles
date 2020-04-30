@@ -1,0 +1,37 @@
+{
+    "title": "Switch Karabiner profiles between 'FS2' & 'FS2 Fkeys'",
+    "rules": [
+      {
+        "description": "Application key switched Karabiner to 'FS2' profile",
+        "manipulators": [
+          {
+            "type": "basic",
+            "from": {
+              "key_code": "application"
+            },
+            "to": [
+              {
+                "shell_command": "'/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli' --select-profile 'FS2'" 
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "description": "Application key switched Karabiner to 'FS2 Fkeys' profile",
+        "manipulators": [
+          {
+            "type": "basic",
+            "from": {
+              "key_code": "application"
+            },
+            "to": [
+              {
+                "shell_command": "'/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli' --select-profile 'FS2 Fkeys'" 
+              }
+            ]
+          }
+        ]
+      }
+    ]
+}
