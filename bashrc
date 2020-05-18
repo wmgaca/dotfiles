@@ -71,15 +71,14 @@ git_info() {
   fi
 }
 
+get_virtual_env_prompt() {
+  if [ -n "$VIRTUAL_ENV" ]; then
+      echo "($(basename $VIRTUAL_ENV)) "
+  fi
+}
+
 VIRTUAL_ENV_DISABLE_PROMPT=1
-
-BASE_PS1='\[$(tput setaf 6)\]\[$(tput bold)\]\w\[$(tput setaf 5)\]$(git_info)\[$(tput setaf 7)\] \[$(tput sgr0)\]\n$ '
-
-if [ ! -z "$VIRTUAL_ENV" ]; then
-    PS1="\n($(basename $VIRTUAL_ENV)) $BASE_PS1"
-else
-    PS1="\n$BASE_PS1"
-fi
+PS1='\n$(get_virtual_env_prompt)\[$(tput setaf 6)\]\[$(tput bold)\]\w\[$(tput setaf 5)\]$(git_info)\[$(tput setaf 7)\] \[$(tput sgr0)\]\n$ '
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
