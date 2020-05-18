@@ -1,6 +1,7 @@
 [user]
 	name = Wojciech Gaca
-	email = wmgaca@gmail.com
+	email = wojciech.gaca@midge-medical.com
+	signingkey = C8D79A1EE0DC5F0B
 [color]
 	interactive = true
 	ui = auto
