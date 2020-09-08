@@ -1,2 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/Users/wmgaca/dev/midge/blue/bin'
+let g:netrw_dirhist_9='/Users/wmgaca/dev/midge/blue'
+let g:netrw_dirhist_8='/Users/wmgaca/dev/midge/blue/blue'
+let g:netrw_dirhist_7='/Users/wmgaca/dev/midge-medical/blue/blue'
+let g:netrw_dirhist_6='/Users/wmgaca/dev/midge-medical/blue/.git'
+let g:netrw_dirhist_5='/Users/wmgaca/dev/midge-medical/qn9080-firmware/.git'
+let g:netrw_dirhist_4='/Users/wmgaca/dev/midge-medical/qn9080-firmware/wireless_examples_bluetooth_wireless_uart_freertos/midge_api'
+let g:netrw_dirhist_3='/Users/wmgaca/dev/midge-medical/midge-web/.git'

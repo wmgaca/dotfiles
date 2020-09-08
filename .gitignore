@@ -5,3 +5,5 @@
 bin.symlink/mfa
 secretrc
 karabinerd/log
+karabiner/automatic_backups
+.DS_Store

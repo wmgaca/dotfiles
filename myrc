@@ -20,3 +20,5 @@ alias gco='git checkout'
 alias gb='git branch'
 alias gfa='git fetch --all'
 alias gg='git grep --break --heading --line-number'
+
+alias kc='kubectl --namespace=midge'

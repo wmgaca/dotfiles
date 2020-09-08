@@ -29,3 +29,6 @@ fi
 # else
 #   eval $( gpg-agent --daemon --write-env-file ~/.gpg-agent-info )
 # fi
+
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
