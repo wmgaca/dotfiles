@@ -1,4 +1,4 @@
-PHONY: packages symlink karabiner-config fish
+PHONY: packages symlink karabiner-config fish symlink-fish
 
 DEFAULT_TARGET: all
 
@@ -25,3 +25,7 @@ all: symlink karabiner-config packages
 fish:
 	@sudo echo "$(which fish)" > /etc/shells
 	# chsh -s $((which fish))
+
+symlink-fish:
+	mkdir -p "$(HOME)/.config"
+	ln -f -s "$(shell pwd)/fish" "$(HOME)/.config/fish"
