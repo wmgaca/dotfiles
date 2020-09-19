@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =0
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/Users/wmgaca/dev/midge/blue/venv'
 let g:netrw_dirhist_0='/Users/wmgaca/dev/midge/blue/bin'
 let g:netrw_dirhist_9='/Users/wmgaca/dev/midge/blue'
 let g:netrw_dirhist_8='/Users/wmgaca/dev/midge/blue/blue'

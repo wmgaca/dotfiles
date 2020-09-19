@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+set -e
+aws ec2 --region eu-central-1 describe-instances --filters Name=tag:Name,Values=gitlab Name=instance-state-name,Values=running --query 'Reservations[0].Instances[0].InstanceId' --output text
