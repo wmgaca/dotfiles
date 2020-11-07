@@ -28,4 +28,5 @@ fish:
 
 symlink-fish:
 	mkdir -p "$(HOME)/.config"
+	rm -rf $(HOME)/.config/fish
 	ln -f -s "$(shell pwd)/fish" "$(HOME)/.config/fish"

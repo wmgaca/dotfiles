@@ -115,11 +115,11 @@
                     }
                 }
             ],
-            "name": "MBA",
+            "name": "Marvin",
             "parameters": {
                 "delay_milliseconds_before_open_device": 1000
             },
-            "selected": false,
+            "selected": true,
             "simple_modifications": [
                 {
                     "from": {
@@ -342,7 +342,7 @@
             "parameters": {
                 "delay_milliseconds_before_open_device": 1000
             },
-            "selected": true,
+            "selected": false,
             "simple_modifications": [],
             "virtual_hid_keyboard": {
                 "country_code": 0,
@@ -613,7 +613,7 @@
                     }
                 }
             ],
-            "name": "FS2 Fkeys",
+            "name": "FS2 F-keys",
             "parameters": {
                 "delay_milliseconds_before_open_device": 1000
             },
