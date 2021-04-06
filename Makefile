@@ -1,4 +1,4 @@
-PHONY: packages symlink karabiner-config fish symlink-fish
+.PHONY: packages symlink karabiner-config fish symlink-fish
 
 DEFAULT_TARGET: all
 
